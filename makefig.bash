@@ -2,18 +2,19 @@
 # Python Script assumes binary is a .vtk
 # NOTE THE USE OF PERIODS IN FILE NAMES AND IMAGE FORMAT
 # NOTE TRAILING / in $inputpath
-# REMOVE TODO in Comments after fit for machine
+# REMOVE FIXME in Comments after fit for machine
+# TODO: use getopts
 
 # XXX inputpath=${3:-$(pwd)} # If in correct working directory
 
 defaultchunk=${1:-1} # 1 for serial else 10 on dingo, 5 on comp2 
 totalnumfigs=${2:-100} # NOTE: Nicer if range divides total# of figs
-inputpath=${3:-'/home/data/work/Soln_splitCyl3D/Ro280runM2M39/'} # TODO
-inputfile=${4:-'Re1.50d4Ro280Ga1_bi_m2_he.'} # TODO NOTE THE PERIOD
-outputfile=${5:-'zRe1.50d4Ro280Ga1_m2_he.'}  # TODO
+inputpath=${3:-'/home/data/work/Soln_splitCyl3D/Ro280runM2M39/'} # FIXME
+inputfile=${4:-'Re1.50d4Ro280Ga1_bi_m2_he.'} # FIXME NOTE THE PERIOD
+outputfile=${5:-'zRe1.50d4Ro280Ga1_m2_he.'}  # FIXME
 imageformat=${6:-'.jpg'}                     # NOTE THE PERIOD
-startchunk=${7:-1}                           # TODO
-timeout=${8:-0}                              # TODO
+startchunk=${7:-1}                           # FIXME
+timeout=${8:-0}                              # FIXME
 
 totalchunk=$(python -c "print int( $totalnumfigs / $defaultchunk )")
  
